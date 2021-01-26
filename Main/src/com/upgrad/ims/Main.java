@@ -9,8 +9,7 @@ public class Main {
         Flight flights = new Flight("123", "GGGG", 200, 150);
         //Passenger p = new Passenger(ad, con, 111);
         Passenger p = new Passenger("xyz", "random city", "random state", "abc", "1111111111", "abc@gmail.com", 111);
-        Ticket ticket = new Ticket("192837", "India", "London", "06.01.2021", "12:55", "08.01.2021", "18:00",p, "15",
-                false, 5500, flights);
+       // Ticket ticket = new Ticket("192837", "India", "London", "06.01.2021", "12:55", "08.01.2021", "18:00",p, "15",false, 5500, flights);
         //RegularTicket reg = new RegularTicket("Food, Water");
         //TouristTicket tour = new TouristTicket("Random address", locations);
 

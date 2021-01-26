@@ -1,12 +1,17 @@
 package com.upgrad.ims;
 import java.util.Arrays;
 
-public class TouristTicket {
+public class TouristTicket extends Ticket
+{
     private String hotelAddress;
     private String[] touristLocations = new String[5];
 
-    public TouristTicket(String hotelAddress, String[] touristLocations)
+    public TouristTicket(String PNRNumber, String departureLoc, String destinationLoc,
+                         String departureDate, String departureTime, String arrivalDate, String arrivalTime, Passenger passenger,
+                         String seatNo, boolean ticketActive, float price, Flight flight,String hotelAddress, String[] touristLocations)
     {
+        super(PNRNumber, departureLoc, destinationLoc, departureDate, departureTime, arrivalDate, arrivalTime, passenger, seatNo, ticketActive, price,
+                flight);
         this.hotelAddress = hotelAddress;
         this.touristLocations = touristLocations;
     }

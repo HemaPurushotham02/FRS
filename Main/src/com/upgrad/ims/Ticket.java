@@ -1,6 +1,6 @@
 package com.upgrad.ims;
 
-public class Ticket
+public abstract class Ticket
 {
 
 
@@ -18,7 +18,7 @@ public class Ticket
     private Flight flight;
 
     public Ticket(String PNRNumber, String departureLoc, String destinationLoc,
-                  String departureDate, String departureTime, String arrivalDate, String arrivalTime, Passenger P,
+                  String departureDate, String departureTime, String arrivalDate, String arrivalTime, Passenger passenger,
                   String seatNo, boolean ticketActive, float price, Flight flight)
     {
         this.PNRNumber = PNRNumber;
