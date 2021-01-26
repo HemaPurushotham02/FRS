@@ -3,14 +3,14 @@ package com.upgrad.ims;
 public class Passenger
 {
 
-    Address address;
-    Contact contact;
-    private int id;
+   private Address address;
+   private Contact contact;
+   private static int id;
 
-    public Passenger(Address address, Contact contact, int id) {
-        this.address = address;
-        this.contact = contact;
-        this.id = id;
+    public Passenger(String passengerStreet, String passengerCity, String passengerState, String passengerName, String passengerPhoneNo, String passengerEmail, int id) {
+        this.address = new Address(passengerStreet, passengerCity, passengerState);
+        this.contact = new Contact(passengerName, passengerPhoneNo, passengerEmail);
+        this.id = id++;
     }
 
     public int getId()
@@ -20,7 +20,7 @@ public class Passenger
 
     public void setId(int id)
     {
-        this.id = id;
+        id = id;
     }
 
     public Contact getContact()
@@ -32,7 +32,18 @@ public class Passenger
     {
         return address;
     }
-
+    public void setContact(Contact contact)
+    {
+        this.contact = contact;
+    }
+    public void setAddress(Address address)
+    {
+        this.address = address;
+    }
+    public static int getPassengerCount()
+    {
+        return id;
+    }
     @Override
     public String toString()
     {
